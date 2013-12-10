@@ -1,0 +1,14 @@
+<div id="filters">
+<div>
+<label for="title-filter">Filter holidays by title</label>
+<input id="title-filter" type="text" ng-model="ctrl.titleFilterString" value = " ">
+</div>
+<div>
+    <label for="category-filter">Filter recipes by category</label>
+    <span id="category-filter" ng-repeat="category in ctrl.categories">
+      <input type="checkbox"
+         ng-model="ctrl.categoryFilterMap[category]">{{category}}
+    </span>
+  </div>
+  <input type="button" value="Clear Filters" ng-click="ctrl.clearFilters()">
+</div>

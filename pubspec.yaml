@@ -1,0 +1,6 @@
+name: holiday_angular
+version: 0.0.1
+description: Holiday manager in Angular
+dependencies:
+  angular: any
+  browser: any

@@ -1,0 +1,38 @@
+[
+  {
+    "id": "1",
+    "title":"Skiing in France",
+    "category":"Relaxation",
+    "startdate":"2013-03-20",
+    "enddate":"2013-03-26",
+    "description":"Skiingi in Tignes, French Alpes",
+    "duration": 7
+  },
+   {
+    "id": "2",
+    "title":"Kids in Poland",
+    "category":"Kids",
+    "startdate":"2013-03-20",
+    "enddate":"2013-03-26",
+    "description":"Kids of friends",
+    "duration": 7
+  },
+   {
+    "id": "3",
+    "title":"Just for Fun at home",
+    "category":"Just for fun",
+    "startdate":"2013-04-01",
+    "enddate":"2013-04-01",
+    "description":"Staying at home, just for fun",
+    "duration": 1
+  },
+   {
+    "id": "4",
+    "title":"Christmas",
+    "category":"Public Holiday",
+    "startdate":"2013-12-24",
+    "enddate":"2013-12-26",
+    "description":"Christmas, finally",
+    "duration": 3
+  }
+]

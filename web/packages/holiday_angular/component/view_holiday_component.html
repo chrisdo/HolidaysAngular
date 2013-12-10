@@ -1,0 +1,7 @@
+<div ng-if="ctrl.holiday != null">
+      <h2>{{ctrl.holiday.title}}</h2>
+      <h5>{{ctrl.holiday.category}}</h5>
+      <span><strong>FROM</strong> {{ctrl.holiday.startDate | date:ctrl.dateFormatString}} <strong>UNTIL </strong> {{ctrl.holiday.endDate | date:ctrl.dateFormatString}}</span><br>
+      <strong>DURATION: </strong> {{ctrl.holiday.duration}}       
+      <blockquote>{{ctrl.holiday.description}}</blockquote>  
+</div>

@@ -1,0 +1,30 @@
+[ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+   display: none !important;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+#holiday-list{
+   min-height: 300px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    text-align: center;
+    position: relative;
+    padding-bottom: 40px;
+}
+.Relaxation{
+   text-decoration: underline;
+   background-color: #FFEAAD;
+}
+
+.Kids{
+   text-decoration: line-through;
+   background-color: #EDFFDA;
+}
