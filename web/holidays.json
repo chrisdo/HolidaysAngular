@@ -20,7 +20,7 @@
    {
     "id": "3",
     "title":"Just for Fun at home",
-    "category":"Just for fun",
+    "category":"fun",
     "startdate":"2013-04-01",
     "enddate":"2013-04-01",
     "description":"Staying at home, just for fun",
@@ -29,7 +29,7 @@
    {
     "id": "4",
     "title":"Christmas",
-    "category":"Public Holiday",
+    "category":"holiday",
     "startdate":"2013-12-24",
     "enddate":"2013-12-26",
     "description":"Christmas, finally",

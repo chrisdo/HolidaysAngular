@@ -6,6 +6,7 @@ import 'package:angular/angular.dart';
     selector: 'search-holiday',
     templateUrl: 'packages/holiday_angular/component/search_holiday_component.html',
     cssUrl: 'packages/holiday_angular/component/search_holiday_component.css',
+    applyAuthorStyles: true,
     publishAs: 'ctrl',
     map: const {
       'title-filter-string': '<=>titleFilterString',

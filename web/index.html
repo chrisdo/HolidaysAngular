@@ -1,39 +1,57 @@
 <!DOCTYPE html>
 <html ng-app>
 <head>
-    <title>Holiday Manager</title>
-    <link rel="stylesheet" href="style.css">
+<title>Holiday Manager</title>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width">
+
+<link rel="stylesheet" href="pure-min-0.3.0.css">
+<link rel="stylesheet" href="style.css">
 </head>
 <body ng-cloak>
 
   <div holiday-manager>
-  <header id="header">
-      <h2>Holiday Manager</h2>
-    </header>
-    
-    <div ng-if="!ctrl.holidaysLoaded || !ctrl.categoriesLoaded">
-      {{ctrl.message}}
-    </div>
-    
-    <div ng-if="ctrl.holidaysLoaded && ctrl.categoriesLoaded">
-      <nav id="controls">
-        <search-holiday 
-            title-filter-string="ctrl.titleFilter"
-            category-filter-map="ctrl.categoryFilterMap">
-        </search-holiday>
-        </nav>      
+
+    <section class="holiday pure-g-r clearfix">
+
+      <div class="pure-u-1 holiday-piece holiday-piece-bright"
+        id="header">
+        <header id="header">
+          <h1>Holiday Manager</h1>
+        </header>
+        <div ng-if="!ctrl.holidaysLoaded || !ctrl.categoriesLoaded">
+          {{ctrl.message}}</div>
+
+        <button ng-click="show = !show"
+          class="pure-button pure-button-primary">Show</button>
+        <div ng-show="!show">
+          <add-holiday holiday-list="ctrl.holidays" categories-list="ctrl.categories"></add-holiday>
+
         </div>
-        
-        <div id="holiday-list">
-        <div ng-repeat="holiday in ctrl.holidays | orderBy:'startDate' | filter:{title:ctrl.titleFilter} | categoryfilter:ctrl.categoryFilterMap" class="{{holiday.category}}">
-        
-         <view-holiday holiday-item="holiday" ng-click="ctrl.selectHoliday(holiday)"></view-holiday> 
-        
-       
-      </div>     
-       </div> 
+        <div ng-if="ctrl.holidaysLoaded && ctrl.categoriesLoaded">
+          <nav id="controls">
+            <search-holiday title-filter-string="ctrl.titleFilter"
+              category-filter-map="ctrl.categoryFilterMap">
+            </search-holiday>
+          </nav>
+        </div>
+      </div>
+   
+        <div
+          ng-repeat="holiday in ctrl.holidays | orderBy:'startDate' | filter:{title:ctrl.titleFilter} | categoryfilter:ctrl.categoryFilterMap"
+          class="pure-u-1-3 holiday-piece holiday-piece-{{holiday.category}}">
+
+          <view-holiday holiday-item="holiday"
+            ng-click="ctrl.selectHoliday(holiday)"></view-holiday>
+
+        </div>
+      
+    </section>
   </div>
-  
+
   <script type="application/dart" src="main.dart"></script>
   <script type="text/javascript" src="packages/browser/dart.js"></script>
 </body>

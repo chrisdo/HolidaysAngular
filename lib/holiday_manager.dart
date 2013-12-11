@@ -13,6 +13,8 @@ class HolidayManagerController {
   static const String LOADING_MESSAGE = "Loading holiday manager...";
   static const String ERROR_MESSAGE = """Sorry! Holiday Manager is currently on holidays""";
 
+  int selected = 0;
+
   String message = LOADING_MESSAGE;
   bool holidaysLoaded = false;
   bool categoriesLoaded = false;
@@ -27,6 +29,8 @@ class HolidayManagerController {
 
   String dateFilter = "dd.MM.yyyy";
 
+  Holiday holidayToAdd = new Holiday("","","Just for fun",new DateTime.now(), new DateTime.now(),"", 1);
+
   HolidayManagerController(Http this._http) {
     _loadData();
   }
@@ -34,6 +38,12 @@ class HolidayManagerController {
 
 
   Holiday selectedHoliday;
+
+  void addHoliday(){
+    holidays.add(holidayToAdd);
+    holidayToAdd = new Holiday("","","Just for fun",new DateTime.now(), new DateTime.now(),"", 1);
+    print('clicked');
+  }
 
   void selectHoliday(Holiday holiday) {
     selectedHoliday = holiday;

@@ -1,14 +1,30 @@
-<!DOCTYPE html>
-
-<html>
-  <head>
-    <title>add_holiday_component</title>
-  </head>
- 
-  <body>   
-    <p id="text"></p>
-    <script type="application/dart" src="add_holiday_component.dart"></script>
-    <!-- for this next line to work, your pubspec.yaml file must have a dependency on 'browser' -->
-    <script src="packages/browser/dart.js"></script>
-  </body>
-</html>
+<form onsubmit="return false;" class="form-inline">
+    <div class="pure-control-group">
+    <label for="title">Title</label> 
+    <input id="title" type="text"
+      ng-model="ctrl.title" placeholder="title"> 
+      </div>
+      <div class="pure-control-group">
+      <label for="category">Category</label>
+     <input id="category" type="text"
+      ng-model="ctrl.selectedCategory" placeholder="relaxation, kids, holiday, fun, doctor"> 
+    </div>
+     <div class="pure-control-group">
+    <label for="startdate">Start date</label> 
+    <input id="startdate"
+      type="date" ng-model="ctrl.startDate">
+      </div>
+       <div class="pure-control-group">
+    <label for="enddate">End date</label> 
+    <input id="enddate" type="date"
+      ng-model="ctrl.endDate"> 
+      </div>
+       <div class="pure-control-group">
+      <label
+      for="description">Description</label>
+    <textarea id="description" ng-model="ctrl.description"
+      placeholder="descritopn"></textarea>
+      </div>
+      <input ng-click="ctrl.addHoliday()" class="btn-primary" type="submit" value="add">
+        
+      </form>
