@@ -14,14 +14,20 @@
 <body ng-cloak>
 
   <div holiday-manager>
+<div class="header">
+        <div class="pure-menu pure-menu-blackbg pure-menu-open pure-menu-horizontal">
+            <a class="pure-menu-heading" href="">Holiday Manager</a>
 
-    <section class="holiday pure-g-r clearfix">
+            <ul>
+                <li class="pure-menu-selected"><a href="#">Dashboard</a></li>
+                <li><a href="#" ng-click="show = !show">Toggle_Add</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </div>
+    </div>
+    <section class="pure-g-r">
 
-      <div class="pure-u-1 holiday-piece holiday-piece-bright"
-        id="header">
-        <header id="header">
-          <h1>Holiday Manager</h1>
-        </header>
+      <div class="pure-u-1 holiday-piece holiday-piece-bright" id="header">     
         <div ng-if="!ctrl.holidaysLoaded || !ctrl.categoriesLoaded">
           {{ctrl.message}}</div>
 
